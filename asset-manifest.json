@@ -1,7 +1,7 @@
 {
   "main.css": "/julu_web/static/css/main.1c8a0957.chunk.css",
-  "main.js": "/julu_web/static/js/main.93737c87.chunk.js",
-  "main.js.map": "/julu_web/static/js/main.93737c87.chunk.js.map",
+  "main.js": "/julu_web/static/js/main.0a3752a5.chunk.js",
+  "main.js.map": "/julu_web/static/js/main.0a3752a5.chunk.js.map",
   "static/js/1.12ca40f7.chunk.js": "/julu_web/static/js/1.12ca40f7.chunk.js",
   "static/js/1.12ca40f7.chunk.js.map": "/julu_web/static/js/1.12ca40f7.chunk.js.map",
   "runtime~main.js": "/julu_web/static/js/runtime~main.efaba421.js",
@@ -29,6 +29,6 @@
   "static/media/brand5.png": "/julu_web/static/media/brand5.4a397c9f.png",
   "static/css/main.1c8a0957.chunk.css.map": "/julu_web/static/css/main.1c8a0957.chunk.css.map",
   "index.html": "/julu_web/index.html",
-  "precache-manifest.84e85db08bd0bed5bdf0e0316958a443.js": "/julu_web/precache-manifest.84e85db08bd0bed5bdf0e0316958a443.js",
+  "precache-manifest.0c82e412c2b3d3a2b380e4da68b76e73.js": "/julu_web/precache-manifest.0c82e412c2b3d3a2b380e4da68b76e73.js",
   "service-worker.js": "/julu_web/service-worker.js"
 }
