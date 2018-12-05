@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "ae711b5f8914b3b43de5",
+    "revision": "d9be43d33592638919f8",
     "url": "/julu_web/static/css/main.1c8a0957.chunk.css"
   },
   {
-    "revision": "ae711b5f8914b3b43de5",
-    "url": "/julu_web/static/js/main.ae711b5f.chunk.js"
+    "revision": "d9be43d33592638919f8",
+    "url": "/julu_web/static/js/main.d9be43d3.chunk.js"
   },
   {
     "revision": "12ca40f7e02148a3ca13",
@@ -100,7 +100,7 @@ self.__precacheManifest = [
     "url": "/julu_web/static/media/brand5.4a397c9f.png"
   },
   {
-    "revision": "f45a4f45820aaed2ae1d9aa6af665d3b",
+    "revision": "b4b2ce384606373128e3f647c24983a6",
     "url": "/julu_web/index.html"
   }
 ];

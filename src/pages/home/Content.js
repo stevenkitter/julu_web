@@ -218,7 +218,8 @@ class JLContent extends Component {
           name: "定制化开发",
           desc: `满足客户需要的其他定制化功能`
         }
-      ]
+      ],
+      ok: false
     };
   }
   moreDetail = () => {
@@ -227,6 +228,9 @@ class JLContent extends Component {
   contact = () => {
     window._MEIQIA("showPanel");
   };
+  componentDidMount() {
+    this.setState({ ok: true });
+  }
   render() {
     const { classes, width } = this.props;
     return (
@@ -251,9 +255,9 @@ class JLContent extends Component {
                     了解更多
                   </Button>
                 </div>
-                {/* <div className={classes.imageWrap}>
-                  <Illustration />
-                </div> */}
+                <div className={classes.imageWrap}>
+                  {this.state.ok && <Illustration />}
+                </div>
               </div>
             </div>
           </div>
