@@ -4,9 +4,7 @@ import { withStyles } from "@material-ui/core/styles";
 
 const styles = theme => ({
   index: {},
-  canvas: {
-    width: `100%`
-  }
+  canvas: {}
 });
 
 class Illustration extends Component {

@@ -14,9 +14,14 @@ import distributionPNG from "../../assets/images/business/distribution.png";
 import cloudPNG from "../../assets/images/business/cloud.png";
 import musicPNG from "../../assets/images/business/music.png";
 import baseSVPNG from "../../assets/images/base_services.png";
-import withWidth, { isWidthUp } from "@material-ui/core/withWidth";
+import simplePNG from "../../assets/images/group_sm.jpg";
 
+import withWidth, { isWidthUp } from "@material-ui/core/withWidth";
+import Steps from "./Steps";
+import Contact from "./Contact";
 import Illustration from "./Illustration";
+import Brands from "./Brands";
+
 const styles = theme => ({
   index: {},
   hero: {
@@ -36,8 +41,8 @@ const styles = theme => ({
   },
   imageWrap: {
     position: `absolute`,
-    left: `550px`,
-    top: `10px`,
+    left: `450px`,
+    top: `-80px`,
     maxWidth: `900px`,
     maxHeight: `900px`,
     "@media screen and (max-width: 1199px)": {
@@ -47,7 +52,7 @@ const styles = theme => ({
     },
     "@media screen and (max-width: 991px)": {
       left: `200px`,
-      top: `150px`,
+      top: `10px`,
       maxWidth: `700px`,
       maxHeight: `700px`
     },
@@ -98,7 +103,7 @@ const styles = theme => ({
     [theme.breakpoints.up("lg")]: {
       marginTop: `0px`
     },
-    paddingTop: `0px`,
+    paddingTop: `20px`,
     marginTop: `100px`,
     background: `url(${bodySVG}) center top no-repeat`,
     backgroundSize: `cover`
@@ -147,10 +152,23 @@ const styles = theme => ({
     padding: `0 30px`
   },
   baseService: {
-    marginTop: `100px`
+    marginTop: `150px`,
+    position: "relative"
+  },
+  clips: {
+    background: `#fff`,
+    position: "absolute",
+    top: `-100px`,
+    left: `0px`,
+    bottom: `0px`,
+    right: `0px`,
+    [theme.breakpoints.up("md")]: {
+      clipPath: `polygon(0 10%, 100% 0%, 100% 90%, 0 100%)`
+    }
   },
   baseServiceTextWrap: {
-    padding: `0px 10px`
+    padding: `0px 10px`,
+    maxWidth: `600px`
   },
   detailText: {
     fontSize: `1.0625rem`,
@@ -203,7 +221,12 @@ class JLContent extends Component {
       ]
     };
   }
-
+  moreDetail = () => {
+    document.getElementById("content").scrollIntoView();
+  };
+  contact = () => {
+    window._MEIQIA("showPanel");
+  };
   render() {
     const { classes, width } = this.props;
     return (
@@ -223,6 +246,7 @@ class JLContent extends Component {
                     color="secondary"
                     className={classes.btn}
                     variant="contained"
+                    onClick={this.moreDetail}
                   >
                     了解更多
                   </Button>
@@ -233,7 +257,7 @@ class JLContent extends Component {
               </div>
             </div>
           </div>
-          <div className={classes.body}>
+          <div className={classes.body} id="content">
             <div>
               <div className={classes.business}>
                 <section className={classes.container}>
@@ -242,7 +266,7 @@ class JLContent extends Component {
                     color="inherit"
                     className={classes.title}
                   >
-                    巨鹿的业务
+                    巨鹿的能为您做什么
                   </Typography>
                   <Typography
                     variant="h5"
@@ -280,20 +304,10 @@ class JLContent extends Component {
                       ))}
                     </Grid>
                   </div>
-                  <Button
-                    color="secondary"
-                    style={{
-                      marginTop: `70px`,
-                      minWidth: `200px`,
-                      minHeight: `40px`
-                    }}
-                    variant="contained"
-                  >
-                    联系我们
-                  </Button>
                 </section>
               </div>
               <div className={classes.baseService}>
+                <div className={classes.clips} />
                 <Grid
                   container
                   spacing={16}
@@ -361,17 +375,90 @@ class JLContent extends Component {
                       style={{
                         height: `100%`,
                         display: `flex`,
-                        alignItems: `center`
+                        alignItems: `center`,
+                        justifyContent: `center`
                       }}
                     >
                       <img
-                        style={{ width: `100%`, margin: `auto 0` }}
+                        style={{
+                          maxWidth: `560px`,
+                          width: `100%`,
+                          margin: `auto 0`
+                        }}
                         src={baseSVPNG}
                         alt="baseService"
                       />
                     </div>
                   </Grid>
                 </Grid>
+              </div>
+
+              <div
+                className={classes.baseService}
+                style={{ marginTop: `100px`, marginBottom: `80px` }}
+              >
+                <Grid container spacing={16}>
+                  <Grid item md={6} sm={12}>
+                    <div
+                      style={{
+                        height: `100%`,
+                        display: `flex`,
+                        alignItems: `center`,
+                        justifyContent: `center`,
+                        padding: `10px 20px`
+                      }}
+                    >
+                      <img
+                        style={{
+                          maxWidth: `800px`,
+                          width: `100%`,
+                          margin: `auto 0`
+                        }}
+                        src={simplePNG}
+                        alt="simplePNG"
+                      />
+                    </div>
+                  </Grid>
+                  <Grid item md={6} sm={12}>
+                    <div
+                      className={classes.baseServiceTextWrap}
+                      style={{ margin: `0 auto` }}
+                    >
+                      <h2 className={classes.title}>简化您的开发体验</h2>
+                      <p className={classes.detailText}>
+                        免去您大量的开发花费，您无需自己聘用任何开发者或者组建昂贵的开发团队，运维团队。
+                      </p>
+                      <p className={classes.detailText}>
+                        您的需求就是我们的工作任务，在一个开发周期里，我们的团队就是您的团队，您的所有业务我们都会绝对认真高效的完成。
+                        您只需详细的构建好业务逻辑、业务场景、消费主体等业务相关的内容，剩下的交给我们，我们竭力为您服务。
+                      </p>
+                      <p className={classes.detailText}>
+                        任何您有的或者没有的业务，我们都会努力帮你达成。我们还支持合作模式，欢迎咨询。
+                      </p>
+                      <Button
+                        color="secondary"
+                        style={{
+                          marginTop: `70px`,
+                          minWidth: `200px`,
+                          minHeight: `60px`
+                        }}
+                        variant="contained"
+                        onClick={this.contact}
+                      >
+                        联系我们
+                      </Button>
+                    </div>
+                  </Grid>
+                </Grid>
+              </div>
+              <div className={classes.steps}>
+                <Steps />
+              </div>
+              <div className={classes.steps}>
+                <Contact />
+              </div>
+              <div className={classes.steps}>
+                <Brands />
               </div>
             </div>
           </div>

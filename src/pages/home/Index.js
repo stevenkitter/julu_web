@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import { withStyles } from "@material-ui/core/styles";
 import AppBar from "./AppBar";
 import Content from "./Content";
+import Footer from "./Footer";
 const styles = theme => ({
   index: {}
 });
@@ -14,6 +15,7 @@ class Index extends Component {
       <div className={classes.index}>
         <AppBar />
         <Content />
+        <Footer />
       </div>
     );
   }
