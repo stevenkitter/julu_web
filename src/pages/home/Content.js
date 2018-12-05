@@ -251,9 +251,9 @@ class JLContent extends Component {
                     了解更多
                   </Button>
                 </div>
-                <div className={classes.imageWrap}>
+                {/* <div className={classes.imageWrap}>
                   <Illustration />
-                </div>
+                </div> */}
               </div>
             </div>
           </div>
