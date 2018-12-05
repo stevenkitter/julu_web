@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { withStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
+import classNames from "classnames";
 import Button from "@material-ui/core/Button";
 import bannerSVG from "../../assets/images/homepage-banner-bg.svg";
 import bodySVG from "../../assets/images/homepage-body-bg.svg";
@@ -12,6 +13,8 @@ import webPNG from "../../assets/images/business/desktop.png";
 import distributionPNG from "../../assets/images/business/distribution.png";
 import cloudPNG from "../../assets/images/business/cloud.png";
 import musicPNG from "../../assets/images/business/music.png";
+import baseSVPNG from "../../assets/images/base_services.png";
+import withWidth, { isWidthUp } from "@material-ui/core/withWidth";
 
 import Illustration from "./Illustration";
 const styles = theme => ({
@@ -33,29 +36,40 @@ const styles = theme => ({
   },
   imageWrap: {
     position: `absolute`,
-    left: `-20px`,
-    top: `380px`,
-    maxWidth: `300px`,
-    maxHeight: `300px`,
-    [theme.breakpoints.between("sm", "md")]: {
-      left: `-20px`,
+    left: `550px`,
+    top: `10px`,
+    maxWidth: `900px`,
+    maxHeight: `900px`,
+    "@media screen and (max-width: 1199px)": {
+      left: `300px`,
+      maxWidth: `800px`,
+      maxHeight: `800px`
+    },
+    "@media screen and (max-width: 991px)": {
+      left: `200px`,
+      top: `150px`,
+      maxWidth: `700px`,
+      maxHeight: `700px`
+    },
+    "@media screen and (max-width: 737px)": {
+      left: `-30px`,
       top: `200px`,
       maxWidth: `700px`,
       maxHeight: `700px`
     },
-    [theme.breakpoints.up("lg")]: {
-      left: `450px`,
-      top: `10px`,
-      maxWidth: `500px`,
-      maxHeight: `500px`
+    "@media screen and (max-width: 575px)": {
+      left: `-20px`,
+      top: `360px`,
+      maxWidth: `450px`,
+      maxHeight: `450px`
     }
   },
   container: {
     margin: "0 auto",
     [theme.breakpoints.up("lg")]: {
-      maxWidth: theme.breakpoints.values.lg
+      maxWidth: 1200
     },
-    width: `100%`,
+    maxWidth: `100%`,
     padding: `0 20px`,
     background: "transparent",
     position: "relative"
@@ -79,7 +93,10 @@ const styles = theme => ({
   },
   body: {
     [theme.breakpoints.between("sm", "md")]: {
-      marginTop: `300px`
+      marginTop: `50px`
+    },
+    [theme.breakpoints.up("lg")]: {
+      marginTop: `0px`
     },
     paddingTop: `0px`,
     marginTop: `100px`,
@@ -91,10 +108,9 @@ const styles = theme => ({
   },
   title: {
     color: `rgb(2, 33, 68)`,
-    fontSize: `44px`,
+    fontSize: `2rem`,
     fontWeight: 500,
     letterSpacing: `-0.5px`,
-    lineHeight: `44px`,
     marginBottom: `20px`,
     marginTop: `0px`,
     textAlign: `center`
@@ -129,6 +145,20 @@ const styles = theme => ({
     color: `#697A89`,
     marginTop: `40px`,
     padding: `0 30px`
+  },
+  baseService: {
+    marginTop: `100px`
+  },
+  baseServiceTextWrap: {
+    padding: `0px 10px`
+  },
+  detailText: {
+    fontSize: `1.0625rem`,
+    lineHeight: `1.375`,
+    color: `#697A89`
+  },
+  detailUL: {
+    minHeight: `165px`
   }
 });
 
@@ -175,7 +205,7 @@ class JLContent extends Component {
   }
 
   render() {
-    const { classes } = this.props;
+    const { classes, width } = this.props;
     return (
       <div className={classes.index}>
         <main>
@@ -183,7 +213,7 @@ class JLContent extends Component {
             <div className={classes.container}>
               <div className={classes.textWrap}>
                 <Typography variant="h4" color="inherit" className={classes.h4}>
-                  巨鹿科技组您业务飞升，采用全新、快速、安全的技术给您的业务保驾护航
+                  巨鹿科技组您业务飞升。采用全新、快速、安全的技术给您的业务保驾护航
                 </Typography>
                 <Typography variant="h6" color="inherit" className={classes.h6}>
                   持续维护和升级您的应用
@@ -194,7 +224,7 @@ class JLContent extends Component {
                     className={classes.btn}
                     variant="contained"
                   >
-                    联系我们
+                    了解更多
                   </Button>
                 </div>
                 <div className={classes.imageWrap}>
@@ -222,9 +252,9 @@ class JLContent extends Component {
                     覆盖各种应用领域，支持市场上的多种设备，让您的客户随时随地的使用您的业务。
                   </Typography>
                   <div className={classes.businessRow}>
-                    <Grid container wrap="wrap">
+                    <Grid container wrap="wrap" spacing={24}>
                       {this.state.business.map((item, index) => (
-                        <Grid item key={index} spacing={24} md={4} xs={12}>
+                        <Grid item key={index} md={4} xs={12}>
                           <div className={classes.businessItem}>
                             <img
                               src={item.logo}
@@ -253,15 +283,95 @@ class JLContent extends Component {
                   <Button
                     color="secondary"
                     style={{
-                      marginTop: `40px`,
+                      marginTop: `70px`,
                       minWidth: `200px`,
                       minHeight: `40px`
                     }}
                     variant="contained"
                   >
-                    了解更多
+                    联系我们
                   </Button>
                 </section>
+              </div>
+              <div className={classes.baseService}>
+                <Grid
+                  container
+                  spacing={16}
+                  wrap={isWidthUp("sm", width) ? "wrap" : "wrap-reverse"}
+                  className={classes.container}
+                >
+                  <Grid item md={6} sm={12}>
+                    <div className={classes.baseServiceTextWrap}>
+                      <h2 className={classes.title}>自由选择：没有限制</h2>
+                      <p className={classes.detailText}>
+                        从自由部署到托管部署，自由选择。您可以自己购买服务器自己部署，或者给我们管理运维。
+                        推荐托管给我们管理，我们有分布式技术，您的所有数据接口都会被我们用分布式技术来管理部署。
+                      </p>
+                      <Grid container>
+                        <Grid item md={6} sm={12}>
+                          <h4 className={classes.itemTitle}>服务器</h4>
+                          <ul
+                            className={classNames(classes.detailText, {
+                              [classes.detailUL]: isWidthUp("sm", width)
+                            })}
+                          >
+                            <li>我们擅长Ubuntu,CentOS,FreeBSD服务器</li>
+                            <li>采用kubernetes分布式部署技术</li>
+                            <li>docker运行机制</li>
+                          </ul>
+                          <h4 className={classes.itemTitle}>产品</h4>
+                          <ul
+                            className={classNames(classes.detailText, {
+                              [classes.detailUL]: isWidthUp("sm", width)
+                            })}
+                          >
+                            <li>代码git管理，可靠安全</li>
+                            <li>代码所有权归客户所有</li>
+                          </ul>
+                        </Grid>
+                        <Grid item md={6} sm={12}>
+                          <h4 className={classes.itemTitle}>数据库</h4>
+                          <ul
+                            className={classNames(classes.detailText, {
+                              [classes.detailUL]: isWidthUp("sm", width)
+                            })}
+                          >
+                            <li>我们擅长Mysql,PostgreSQL,TiDB等数据库技术</li>
+                            <li>数据库安全可靠，屏蔽外部端口访问权限</li>
+                            <li>
+                              不对外开放，但可针对客户需求，导出数据库数据
+                            </li>
+                          </ul>
+                          <h4 className={classes.itemTitle}>售后</h4>
+                          <ul
+                            className={classNames(classes.detailText, {
+                              [classes.detailUL]: isWidthUp("sm", width)
+                            })}
+                          >
+                            <li>上线开始，免费运维维护一年</li>
+                            <li>后续根据业务量每年收取极少的维护升级费用</li>
+                            <li>一次开发，终身服务</li>
+                          </ul>
+                        </Grid>
+                      </Grid>
+                    </div>
+                  </Grid>
+                  <Grid item md={6} sm={12}>
+                    <div
+                      style={{
+                        height: `100%`,
+                        display: `flex`,
+                        alignItems: `center`
+                      }}
+                    >
+                      <img
+                        style={{ width: `100%`, margin: `auto 0` }}
+                        src={baseSVPNG}
+                        alt="baseService"
+                      />
+                    </div>
+                  </Grid>
+                </Grid>
               </div>
             </div>
           </div>
@@ -272,7 +382,8 @@ class JLContent extends Component {
 }
 
 JLContent.propTypes = {
-  classes: PropTypes.object.isRequired
+  classes: PropTypes.object.isRequired,
+  width: PropTypes.string.isRequired
 };
 
-export default withStyles(styles)(JLContent);
+export default withWidth()(withStyles(styles)(JLContent));
