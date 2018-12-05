@@ -100,7 +100,7 @@ self.__precacheManifest = [
     "url": "/julu_web/static/media/brand5.4a397c9f.png"
   },
   {
-    "revision": "9ec359f2da97ecdb2ca8ad777ae86a2f",
+    "revision": "f45a4f45820aaed2ae1d9aa6af665d3b",
     "url": "/julu_web/index.html"
   }
 ];
