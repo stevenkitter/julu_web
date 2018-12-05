@@ -119,6 +119,7 @@ class Steps extends Component {
                       src={item.logo}
                       style={{ width: `108px` }}
                       alt="item"
+                      className="wow zoomIn"
                     />
                     <h1 className={classes.itemTitle}>{item.name}</h1>
                     <p className={classes.itemDesc}>{item.desc}</p>

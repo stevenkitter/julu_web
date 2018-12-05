@@ -42,7 +42,7 @@ const styles = theme => ({
   imageWrap: {
     position: `absolute`,
     left: `450px`,
-    top: `-80px`,
+    top: `10px`,
     maxWidth: `900px`,
     maxHeight: `900px`,
     "@media screen and (max-width: 1199px)": {
@@ -286,7 +286,10 @@ class JLContent extends Component {
                           <div className={classes.businessItem}>
                             <img
                               src={item.logo}
-                              className={classes.itemImage}
+                              className={classNames(
+                                classes.itemImage,
+                                "wow bounceInUp"
+                              )}
                               alt="business logo"
                             />
                             <Typography
@@ -391,6 +394,7 @@ class JLContent extends Component {
                         }}
                         src={baseSVPNG}
                         alt="baseService"
+                        className="wow bounceInRight"
                       />
                     </div>
                   </Grid>
@@ -414,10 +418,12 @@ class JLContent extends Component {
                     >
                       <img
                         style={{
-                          maxWidth: `800px`,
+                          maxWidth: `700px`,
                           width: `100%`,
-                          margin: `auto 0`
+                          margin: `auto 0`,
+                          display: `block`
                         }}
+                        className="wow bounceInLeft"
                         src={simplePNG}
                         alt="simplePNG"
                       />

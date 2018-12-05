@@ -3,11 +3,18 @@ import PropTypes from "prop-types";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { withStyles } from "@material-ui/core/styles";
 import Home from "./home/Index";
+import "animate.css";
+import WOW from "wowjs";
 const styles = theme => ({
   index: {}
 });
 
 class Index extends Component {
+  componentDidMount() {
+    new WOW.WOW({
+      live: false
+    }).init();
+  }
   render() {
     const { classes } = this.props;
     return (

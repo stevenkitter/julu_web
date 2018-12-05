@@ -55,9 +55,14 @@ class Brands extends Component {
             {this.state.brands.map((item, index) => (
               <Grid item xs={12} sm={4} md={2} key={index}>
                 <img
-                  style={{ height: index === 0 ? `30px` : `50px` }}
+                  style={{
+                    height: index === 0 ? `30px` : `50px`,
+                    margin: `0 auto`,
+                    display: `block`
+                  }}
                   src={item.logo}
                   alt="logo"
+                  className="wow zoomIn"
                 />
               </Grid>
             ))}

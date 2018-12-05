@@ -81,8 +81,12 @@ class Contact extends Component {
     const { classes } = this.props;
     return (
       <div className={classes.index}>
-        <div className={classNames(classes.left, classes.cube)} />
-        <div className={classNames(classes.right, classes.cube)} />
+        <div
+          className={classNames(classes.left, classes.cube, "wow slideInDown")}
+        />
+        <div
+          className={classNames(classes.right, classes.cube, "wow slideInDown")}
+        />
 
         <div className={classes.container}>
           <h1 className={classes.title}>巨鹿希望与您合作</h1>
