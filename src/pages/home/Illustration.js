@@ -18,7 +18,9 @@ class Illustration extends Component {
             id="canvas"
             style={{
               display: `block`,
-              position: `absolute`
+              position: `absolute`,
+              width: `300px`,
+              height: `300px`
             }}
           />
           <div
@@ -30,7 +32,9 @@ class Illustration extends Component {
               position: `absolute`,
               left: `0px`,
               top: `0px`,
-              display: `block`
+              display: `block`,
+              width: `300px`,
+              height: `300px`
             }}
           />
         </div>
