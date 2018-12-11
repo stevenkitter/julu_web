@@ -3,10 +3,7 @@ import PropTypes from "prop-types";
 import { withStyles } from "@material-ui/core/styles";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
-import Typography from "@material-ui/core/Typography";
-import IconButton from "@material-ui/core/IconButton";
-import MenuIcon from "@material-ui/icons/Menu";
-
+import Logo from "../../assets/images/logo_nav.svg";
 const styles = theme => ({
   index: {
     position: "absolute",
@@ -41,16 +38,13 @@ class JLAppBar extends Component {
       <div className={classes.index}>
         <AppBar className={classes.appBar} position="static" elevation={0}>
           <Toolbar className={classes.toolBar}>
-            <IconButton
-              className={classes.menuButton}
-              color="inherit"
-              aria-label="Menu"
-            >
-              <MenuIcon />
-            </IconButton>
-            <Typography variant="h6" color="inherit" className={classes.grow}>
-              巨鹿科技
-            </Typography>
+            <img
+              style={{
+                width: `150px`
+              }}
+              src={Logo}
+              alt="logo"
+            />
           </Toolbar>
         </AppBar>
       </div>
