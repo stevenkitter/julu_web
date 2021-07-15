@@ -7,3 +7,6 @@
 `react-router-dom` 路由
 
 `@material-ui/core` UI
+
+#### 部署
+scp -r ./build/* ubuntu@julu666.com:/home/ubuntu/production/web/home_web
