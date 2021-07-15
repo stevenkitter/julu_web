@@ -22,7 +22,7 @@ import Contact from "./Contact";
 import Illustration from "./Illustration";
 import Brands from "./Brands";
 
-const styles = theme => ({
+const styles = (theme) => ({
   index: {},
   hero: {
     paddingBottom: `500px`,
@@ -31,13 +31,13 @@ const styles = theme => ({
     minHeight: `150px`,
     backgroundPosition: `center bottom`,
     backgroundSize: `cover`,
-    backgroundRepeat: `no-repeat`
+    backgroundRepeat: `no-repeat`,
   },
   textWrap: {
     height: `200px`,
     color: theme.palette.common.white,
     maxWidth: `650px`,
-    position: "relative"
+    position: "relative",
   },
   imageWrap: {
     position: `absolute`,
@@ -48,68 +48,68 @@ const styles = theme => ({
     "@media screen and (max-width: 1199px)": {
       left: `300px`,
       maxWidth: `800px`,
-      maxHeight: `800px`
+      maxHeight: `800px`,
     },
     "@media screen and (max-width: 991px)": {
       left: `200px`,
       top: `10px`,
       maxWidth: `700px`,
-      maxHeight: `700px`
+      maxHeight: `700px`,
     },
     "@media screen and (max-width: 737px)": {
       left: `-30px`,
       top: `200px`,
       maxWidth: `700px`,
-      maxHeight: `700px`
+      maxHeight: `700px`,
     },
     "@media screen and (max-width: 575px)": {
       left: `-20px`,
       top: `360px`,
       maxWidth: `450px`,
-      maxHeight: `450px`
-    }
+      maxHeight: `450px`,
+    },
   },
   container: {
     margin: "0 auto",
     [theme.breakpoints.up("lg")]: {
-      maxWidth: 1200
+      maxWidth: 1200,
     },
     maxWidth: `100%`,
     padding: `0 20px`,
     background: "transparent",
-    position: "relative"
+    position: "relative",
   },
   h4: {
     fontWeight: `600`,
     fontSize: `2rem`,
     letterSpacing: `-0.25px`,
     lineHeight: `1.5`,
-    marginBottom: `20px`
+    marginBottom: `20px`,
   },
   h6: {
     fontWeight: `400`,
     letterSpacing: `0.5px`,
-    lineHeight: `1.25`
+    lineHeight: `1.25`,
   },
   btn: {
     minWidth: `200px`,
     minHeight: `50px`,
-    marginTop: `70px`
+    marginTop: `70px`,
   },
   body: {
     [theme.breakpoints.between("sm", "md")]: {
-      marginTop: `50px`
+      marginTop: `50px`,
     },
     [theme.breakpoints.up("lg")]: {
-      marginTop: `0px`
+      marginTop: `0px`,
     },
     paddingTop: `20px`,
     marginTop: `100px`,
     background: `url(${bodySVG}) center top no-repeat`,
-    backgroundSize: `cover`
+    backgroundSize: `cover`,
   },
   business: {
-    textAlign: "center"
+    textAlign: "center",
   },
   title: {
     color: `rgb(2, 33, 68)`,
@@ -118,21 +118,21 @@ const styles = theme => ({
     letterSpacing: `-0.5px`,
     marginBottom: `20px`,
     marginTop: `0px`,
-    textAlign: `center`
+    textAlign: `center`,
   },
   subTitle: {
     fontWeight: 400,
     letterSpacing: `-0.5px`,
     lineHeight: `1.25`,
-    color: `#697A89`
+    color: `#697A89`,
   },
   businessRow: {},
   businessItem: {
-    marginTop: `70px`
+    marginTop: `70px`,
   },
   itemImage: {
     width: `180px`,
-    height: `180px`
+    height: `180px`,
   },
   itemTitle: {
     fontWeight: 500,
@@ -140,7 +140,7 @@ const styles = theme => ({
     lineHeight: `20px`,
     fontSize: `20px`,
     color: `rgb(2, 33, 68)`,
-    marginTop: `40px`
+    marginTop: `40px`,
   },
   itemDesc: {
     fontWeight: 400,
@@ -149,11 +149,11 @@ const styles = theme => ({
     fontSize: `15px`,
     color: `#697A89`,
     marginTop: `40px`,
-    padding: `0 30px`
+    padding: `0 30px`,
   },
   baseService: {
     marginTop: `150px`,
-    position: "relative"
+    position: "relative",
   },
   clips: {
     background: `#fff`,
@@ -163,21 +163,21 @@ const styles = theme => ({
     bottom: `0px`,
     right: `0px`,
     [theme.breakpoints.up("md")]: {
-      clipPath: `polygon(0 10%, 100% 0%, 100% 90%, 0 100%)`
-    }
+      clipPath: `polygon(0 10%, 100% 0%, 100% 90%, 0 100%)`,
+    },
   },
   baseServiceTextWrap: {
     padding: `0px 10px`,
-    maxWidth: `600px`
+    maxWidth: `600px`,
   },
   detailText: {
     fontSize: `1.0625rem`,
     lineHeight: `1.375`,
-    color: `#697A89`
+    color: `#697A89`,
   },
   detailUL: {
-    minHeight: `165px`
-  }
+    minHeight: `165px`,
+  },
 });
 
 class JLContent extends Component {
@@ -190,36 +190,36 @@ class JLContent extends Component {
           name: "App开发",
           desc: `移动应用开发！包括iOS,Andriod设备，支持市场上基本所有的手机操作系统。
           移动应用适合大业务的客户，并且有一定规模的客户基数。
-          因为需要客户下载应用，所有需要客户的操作量比较大，优势就是主动性强，定制化强，适合规模化的项目。`
+          因为需要客户下载应用，所有需要客户的操作量比较大，优势就是主动性强，定制化强，适合规模化的项目。`,
         },
         {
           logo: webPNG,
           name: "Web开发",
-          desc: `网站开发！包括门户网站、公司宣传网站、个人博客、复杂的后台管理系统等，网站根据需求支持多种功能`
+          desc: `网站开发！包括门户网站、公司宣传网站、个人博客、复杂的后台管理系统等，网站根据需求支持多种功能`,
         },
         {
           logo: appletPNG,
           name: "小程序开发",
           desc: `小程序开发！包括微信小程序，阿里小程序等平台。小程序功能化很强，适合需要快速实现，多种设备支持的客户。
-          小程序可以在任何安装了微信的手机设备上使用，并且转发功能很便捷，宣传速度快。缺点就是依赖于微信生态，自主性差。`
+          小程序可以在任何安装了微信的手机设备上使用，并且转发功能很便捷，宣传速度快。缺点就是依赖于微信生态，自主性差。`,
         },
         {
           logo: distributionPNG,
           name: "网络爬虫",
-          desc: `并发获取网络资源，根据客户需求获取所需要的网络公共资源，帮组客户最大限度的使用网络上已有的资源`
+          desc: `并发获取网络资源，根据客户需求获取所需要的网络公共资源，帮组客户最大限度的使用网络上已有的资源`,
         },
         {
           logo: cloudPNG,
           name: "脚本，服务器运维",
-          desc: `根据一些已经拥有服务却无法维护的客户进行服务器升级，数据库维护等基础设施的运维工作`
+          desc: `根据一些已经拥有服务却无法维护的客户进行服务器升级，数据库维护等基础设施的运维工作`,
         },
         {
           logo: musicPNG,
           name: "定制化开发",
-          desc: `满足客户需要的其他定制化功能`
-        }
+          desc: `满足客户需要的其他定制化功能`,
+        },
       ],
-      ok: false
+      ok: false,
     };
   }
   moreDetail = () => {
@@ -240,7 +240,7 @@ class JLContent extends Component {
             <div className={classes.container}>
               <div className={classes.textWrap}>
                 <Typography variant="h4" color="inherit" className={classes.h4}>
-                  巨鹿科技组您业务飞升。采用全新、快速、安全的技术给您的业务保驾护航
+                  巨鹿科技助您业务飞升。采用全新、快速、安全的技术给您的业务保驾护航
                 </Typography>
                 <Typography variant="h6" color="inherit" className={classes.h6}>
                   持续维护和升级您的应用
@@ -333,7 +333,7 @@ class JLContent extends Component {
                           <h4 className={classes.itemTitle}>服务器</h4>
                           <ul
                             className={classNames(classes.detailText, {
-                              [classes.detailUL]: isWidthUp("sm", width)
+                              [classes.detailUL]: isWidthUp("sm", width),
                             })}
                           >
                             <li>我们擅长Ubuntu,CentOS,FreeBSD服务器</li>
@@ -343,7 +343,7 @@ class JLContent extends Component {
                           <h4 className={classes.itemTitle}>产品</h4>
                           <ul
                             className={classNames(classes.detailText, {
-                              [classes.detailUL]: isWidthUp("sm", width)
+                              [classes.detailUL]: isWidthUp("sm", width),
                             })}
                           >
                             <li>代码git管理，可靠安全</li>
@@ -354,7 +354,7 @@ class JLContent extends Component {
                           <h4 className={classes.itemTitle}>数据库</h4>
                           <ul
                             className={classNames(classes.detailText, {
-                              [classes.detailUL]: isWidthUp("sm", width)
+                              [classes.detailUL]: isWidthUp("sm", width),
                             })}
                           >
                             <li>我们擅长Mysql,PostgreSQL,TiDB等数据库技术</li>
@@ -366,7 +366,7 @@ class JLContent extends Component {
                           <h4 className={classes.itemTitle}>售后</h4>
                           <ul
                             className={classNames(classes.detailText, {
-                              [classes.detailUL]: isWidthUp("sm", width)
+                              [classes.detailUL]: isWidthUp("sm", width),
                             })}
                           >
                             <li>上线开始，免费运维维护一年</li>
@@ -383,14 +383,14 @@ class JLContent extends Component {
                         height: `100%`,
                         display: `flex`,
                         alignItems: `center`,
-                        justifyContent: `center`
+                        justifyContent: `center`,
                       }}
                     >
                       <img
                         style={{
                           maxWidth: `560px`,
                           width: `100%`,
-                          margin: `auto 0`
+                          margin: `auto 0`,
                         }}
                         src={baseSVPNG}
                         alt="baseService"
@@ -413,7 +413,7 @@ class JLContent extends Component {
                         display: `flex`,
                         alignItems: `center`,
                         justifyContent: `center`,
-                        padding: `10px 20px`
+                        padding: `10px 20px`,
                       }}
                     >
                       <img
@@ -421,7 +421,7 @@ class JLContent extends Component {
                           maxWidth: `700px`,
                           width: `100%`,
                           margin: `auto 0`,
-                          display: `block`
+                          display: `block`,
                         }}
                         className="wow bounceInLeft"
                         src={simplePNG}
@@ -450,7 +450,7 @@ class JLContent extends Component {
                         style={{
                           marginTop: `70px`,
                           minWidth: `200px`,
-                          minHeight: `60px`
+                          minHeight: `60px`,
                         }}
                         variant="contained"
                         onClick={this.contact}
@@ -480,7 +480,7 @@ class JLContent extends Component {
 
 JLContent.propTypes = {
   classes: PropTypes.object.isRequired,
-  width: PropTypes.string.isRequired
+  width: PropTypes.string.isRequired,
 };
 
 export default withWidth()(withStyles(styles)(JLContent));
